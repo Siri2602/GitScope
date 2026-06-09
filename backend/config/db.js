@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const pool = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
+  port: process.env.DB_PORT || 3306,
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || '',
   database: process.env.DB_NAME || 'gitscope',
@@ -13,11 +14,11 @@ const pool = mysql.createPool({
 
 const initDB = async () => {
   const conn = await pool.getConnection();
-  await conn.execute(`
+  await conn.query(`
     CREATE DATABASE IF NOT EXISTS \`${process.env.DB_NAME || 'gitscope'}\`
   `);
-  await conn.execute(`USE \`${process.env.DB_NAME || 'gitscope'}\``);
-  await conn.execute(`
+  await conn.query(`USE \`${process.env.DB_NAME || 'gitscope'}\``);
+  await conn.query(`
     CREATE TABLE IF NOT EXISTS profiles (
       id INT AUTO_INCREMENT PRIMARY KEY,
       username VARCHAR(100) UNIQUE NOT NULL,
