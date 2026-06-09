@@ -4,7 +4,7 @@ import Navbar from './components/ui/Navbar';
 import Landing from './pages/Landing';
 import Analytics from './pages/Analytics';
 import Profiles from './pages/Profiles';
-import ThemeToggle from './components/ThemeToggle';
+import ThemeToggle from './components/ThemeToggle.jsx';
 
 export default function App() {
   return (
