@@ -25,11 +25,11 @@ npm install
 
 2. Configure ".env":
 
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=gitscope
-GITHUB_TOKEN=your_token
+- DB_HOST=localhost
+- DB_USER=root
+- DB_PASSWORD=your_password
+- DB_NAME=gitscope
+- GITHUB_TOKEN=your_token
 
 3. Start the application:
 
