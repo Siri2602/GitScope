@@ -1,3 +1,4 @@
+import React from 'react';
 import ParticleBackground from '../components/landing/ParticleBackground';
 import Hero from '../components/landing/Hero';
 
